@@ -22,7 +22,7 @@ client.on('message', async message => {
    if (!message.guild.member(user)
    .kickable) return message.reply('**Bot** не имеет разрешения').then(message => message.delete(35000));
    message.guild.member(user).ban();
-   message.channel.send(`<@${user.id}> запрещен **${message.guild.name}** ✈`);
+   message.channel.send(`<@${user.id}> Забанен на сервере! **${message.guild.name}** ✈`);
    message.channel.send();
    
    if(!message.guild.channels.find('name', 'log-muted🗂')) return message.channel.send('сделать канал с именем **logs** Получение журналов').then(msg => msg.delete(5000));
