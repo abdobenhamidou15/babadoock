@@ -1,6 +1,30 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+    const adminww = "++";
+client.on('message', message => {
+if (message.content === adminww + 'idle') {
+     if (message.author.id !== '312545924952096769') return ;
+     client.user.setStatus("idle")
+}
+});
+
+
+const adminabdo = "++";
+client.on('message', message => {
+if (message.content === adminabdo + 'online') {
+     if (message.author.id !== '312545924952096769') return ;
+     client.user.setStatus("online")
+}
+});
+
+const adminben = "++";
+client.on('message', message => {
+if (message.content === adminben + 'dnd') {
+     if (message.author.id !== '312545924952096769') return ;
+     client.user.setStatus("dnd")
+}
+});
 
 client.on('message', async message => {
   if (message.content.startsWith("++ban")) {
