@@ -37,7 +37,7 @@ client.on('message', async message => {
      reason = 'Нет причин';
    }
    if (message.mentions.users.size < 1) return message.reply('@имя пользователя !!').then(message => message.delete(35000));
-   let customemoji5 = client.emojis.find(r => r.name === ':MisterDook:');
+   let customemoji5 = client.emojis.find(r => r.name === '544847695489478548');
    var userM = message.guild.member(message.mentions.users.first());
    if(userM.id === message.author.id) return message.reply('я не могу дать вам запрет').then(m => m.delete(5000));
    if(userM.id === message.guild.owner.id) return message.reply(`Этот участник имеет модераторские права! ${customemoji5}`);
