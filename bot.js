@@ -73,7 +73,7 @@ client.on('message', async message => {
 
  client.on('message', async message => {
   if (message.content.startsWith("++kick")) {
- if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply('Вы не получите мут, бот не дает мут владельцам!:x:')
+ if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply('У вас нет прав!')
  if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) return message.reply('**Bot** не имеет разрешения')
  let user = message.mentions.users.first();
  let user1 = message.mentions.users.first();
@@ -99,11 +99,11 @@ client.on('message', async message => {
  
  const wunmuteembed = new Discord.RichEmbed()
  .setColor(message.guild.me.highestRole.color) 
- .setAuthor(`член пнул!`, user.displayAvatarURL)
+ .setAuthor(`Участник кикнут!`, user.displayAvatarURL)
  .setThumbnail(user1.displayAvatarURL)
- .addField("пользователь",`${user1.tag}`,true)
- .addField("ногами",`${message.author.tag}`,true)
- .addField("причина",`${reason}`,true)
+ .addField("Пользователь",`${user1.tag}`,true)
+ .addField("Модератор",`${message.author.tag}`,true)
+ .addField("Причина",`${reason}`,true)
  .setTimestamp()
  message.guild.channels.find('name', 'log-muted🗂').sendEmbed(wunmuteembed)
  
