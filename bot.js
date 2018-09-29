@@ -77,7 +77,7 @@ client.on('message', async message => {
  if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) return message.reply('**Bot** не имеет разрешения')
  let user = message.mentions.users.first();
  let user1 = message.mentions.users.first();
- let reason = message.content.split(' ').slice(2).join(" ");  
+ let reason = message.content.split(' ').slice(3).join(" ");  
  if (!reason) {
    reason = 'Нет причин';
  }
@@ -92,7 +92,7 @@ client.on('message', async message => {
  if (!message.guild.member(user)
  .kickable) return message.reply('**Bot** не имеет разрешения').then(message => message.delete(35000));
  message.guild.member(user).kick();
- message.channel.send(`:white_check_mark: **${message.author.username}** Был кикнут из сервера.т <@${user.id}>`)
+ message.channel.send(`:ballot_box_with_check: ${user.tag}, Был кикнут из сервера!`)
  message.channel.sendEmbed();
  
  if(!message.guild.channels.find('name', 'log-muted🗂')) return message.channel.send('сделать канал с именем **logs** Получение журналов').then(msg => msg.delete(5000));
