@@ -62,7 +62,7 @@ client.on('message', async message => {
    message.guild.channels.find('name', 'log-muted🗂').sendEmbed(wunmuteembed)
  
    var unmuteembeddm = new Discord.RichEmbed()
-   .setDescription(`У вас Бан на сервере ${message.guild.name}
+   .setDescription(`У вас Бан на сервере **${message.guild.name}**
 Причина: **${reason}**`)
    .setColor("#ff0000")
      user.send(unmuteembeddm);
