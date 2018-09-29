@@ -53,11 +53,11 @@ client.on('message', async message => {
  
    const wunmuteembed = new Discord.RichEmbed()
    .setColor(message.guild.me.highestRole.color) 
-   .setAuthor(`член запрещен!`, user.displayAvatarURL)
+   .setAuthor(`Участник Забанен!`, user.displayAvatarURL)
    .setThumbnail(user1.displayAvatarURL)
-   .addField("пользователь",`${user1.tag}`,true)
-   .addField("Запрещено",`${message.author.tag}`,true)
-   .addField("Причина:",`${reason}`,true)
+   .addField("Пользователь",`${user1.tag}`,true)
+   .addField("Модератор",`${message.author.tag}`,true)
+   .addField("Причина",`${reason}`,true)
    .setTimestamp()
    message.guild.channels.find('name', 'log-muted🗂').sendEmbed(wunmuteembed)
  
