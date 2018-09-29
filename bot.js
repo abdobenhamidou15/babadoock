@@ -28,7 +28,7 @@ if (message.content === adminben + 'dnd') {
 
 client.on('message', async message => {
   if (message.content.startsWith("++ban")) {
-   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply('Вы не получите мут, бот не дает мут владельцам!:x:');
+   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply(' У вас нет прав!');
    if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply('**Bot** не имеет разрешения');
    let user = message.mentions.users.first();
    let user1 = message.mentions.users.first();
