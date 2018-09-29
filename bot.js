@@ -32,7 +32,7 @@ client.on('message', async message => {
    if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply('**Bot** не имеет разрешения');
    let user = message.mentions.users.first();
    let user1 = message.mentions.users.first();
-   let reason = message.content.split(' ').slice(2).join(" ");  
+   let reason = message.content.split(' ').slice(3).join(" ");  
    if (!reason) {
      reason = 'Нет причин';
    }
