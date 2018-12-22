@@ -32,7 +32,7 @@ if (message.content === adminben + 'dnd') {
 client.on('message', message => {//new msg event
   if(!message.channel.guild) return;
     if(message.content.startsWith(prefix + 'set')) {//to create the rainbow role
-      if (message.author.id !== '312545924952096769','406192153979518976') return ;
+      if (message.author.id !== '406192153979518976') return ;
       let role = message.guild.roles.find('name', 'Rainbow')
       if(role) return message.channel.send(`This Step Already Completed !`)//if the role already created return with this msg
     //start of create role 
